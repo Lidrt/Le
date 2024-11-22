@@ -43,3 +43,33 @@ body {
 .controls {
     margin: 20px 0;
 }
+const mangaImages = [
+    'path/to/manga/page1.jpg', // замените на фактические пути к страницам манги
+    'path/to/manga/page2.jpg',
+    'path/to/manga/page3.jpg',
+];
+
+let currentPage = 0;
+
+const mangaImage = document.getElementById('manga-image');
+
+function updateImage() {
+    mangaImage.src = mangaImages[currentPage];
+}
+
+document.getElementById('prev-button').addEventListener('click', () => {
+    if (currentPage > 0) {
+        currentPage--;
+        updateImage();
+    }
+});
+
+document.getElementById('next-button').addEventListener('click', () => {
+    if (currentPage < mangaImages.length - 1) {
+        currentPage++;
+        updateImage();
+    }
+});
+
+// Инициализация с первой страницей
+updateImage();
