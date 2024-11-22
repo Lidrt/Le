@@ -20,3 +20,26 @@
     <script src="script.js"></script>
 </body>
 </html>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#manga-viewer {
+    margin: 20px 0;
+}
+
+#manga-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.controls {
+    margin: 20px 0;
+}
